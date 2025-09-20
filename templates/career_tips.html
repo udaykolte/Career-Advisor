@@ -1,0 +1,386 @@
+{% extends "base.html" %}
+
+{% block title %}Career Tips & Advice - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<div class="tips-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1><i class="fas fa-lightbulb"></i> Career Tips & Advice</h1>
+                <p class="lead">Expert insights and practical strategies to accelerate your career growth and professional success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Tips</button>
+                    <button class="filter-btn" data-filter="job-search">Job Search</button>
+                    <button class="filter-btn" data-filter="interview">Interview</button>
+                    <button class="filter-btn" data-filter="skill-dev">Skill Development</button>
+                    <button class="filter-btn" data-filter="networking">Networking</button>
+                    <button class="filter-btn" data-filter="leadership">Leadership</button>
+                    <button class="filter-btn" data-filter="work-life">Work-Life Balance</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Grid -->
+    <section class="tips-grid">
+        <div class="container">
+            <div class="row" id="tipsContainer">
+                
+                <!-- Job Search Tips -->
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="job-search">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Optimize Your Resume for ATS</h4>
+                        <p class="tip-category">Job Search</p>
+                        <p>Learn how to format your resume to pass through Applicant Tracking Systems and land more interviews.</p>
+                        <ul class="tip-points">
+                            <li>Use standard section headings</li>
+                            <li>Include relevant keywords</li>
+                            <li>Choose ATS-friendly formats</li>
+                            <li>Avoid graphics and fancy fonts</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★★</span>
+                            <small>4.8/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="job-search">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <h4>Target Your Applications</h4>
+                        <p class="tip-category">Job Search</p>
+                        <p>Quality over quantity - customize each application for better results and higher response rates.</p>
+                        <ul class="tip-points">
+                            <li>Research the company culture</li>
+                            <li>Tailor your cover letter</li>
+                            <li>Match your skills to job requirements</li>
+                            <li>Show genuine interest in the role</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★☆</span>
+                            <small>4.6/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interview Tips -->
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="interview">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Master the STAR Method</h4>
+                        <p class="tip-category">Interview</p>
+                        <p>Structure your behavioral interview answers using Situation, Task, Action, Result framework.</p>
+                        <ul class="tip-points">
+                            <li>Describe the situation clearly</li>
+                            <li>Explain the task you needed to accomplish</li>
+                            <li>Detail the actions you took</li>
+                            <li>Share the results and what you learned</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★★</span>
+                            <small>4.9/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="interview">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h4>Ask Strategic Questions</h4>
+                        <p class="tip-category">Interview</p>
+                        <p>Show your interest and assess cultural fit by asking thoughtful questions during interviews.</p>
+                        <ul class="tip-points">
+                            <li>Ask about team dynamics</li>
+                            <li>Inquire about growth opportunities</li>
+                            <li>Understand success metrics</li>
+                            <li>Learn about company challenges</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★☆</span>
+                            <small>4.7/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Development Tips -->
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="skill-dev">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Follow the 70-20-10 Rule</h4>
+                        <p class="tip-category">Skill Development</p>
+                        <p>Balance your learning approach: 70% on-the-job experience, 20% mentoring, 10% formal training.</p>
+                        <ul class="tip-points">
+                            <li>Take on challenging projects (70%)</li>
+                            <li>Find mentors and peer learning (20%)</li>
+                            <li>Attend courses and workshops (10%)</li>
+                            <li>Track your learning progress</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★★</span>
+                            <small>4.8/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="skill-dev">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Stay Industry Relevant</h4>
+                        <p class="tip-category">Skill Development</p>
+                        <p>Keep your skills current by following industry trends and emerging technologies in your field.</p>
+                        <ul class="tip-points">
+                            <li>Subscribe to industry publications</li>
+                            <li>Join professional communities</li>
+                            <li>Attend conferences and webinars</li>
+                            <li>Experiment with new tools</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★☆</span>
+                            <small>4.5/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Networking Tips -->
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="networking">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Build Authentic Relationships</h4>
+                        <p class="tip-category">Networking</p>
+                        <p>Focus on building genuine connections rather than transactional relationships for long-term success.</p>
+                        <ul class="tip-points">
+                            <li>Offer help before asking for it</li>
+                            <li>Follow up consistently</li>
+                            <li>Share valuable content</li>
+                            <li>Remember personal details</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★★</span>
+                            <small>4.7/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="networking">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h4>Leverage LinkedIn Effectively</h4>
+                        <p class="tip-category">Networking</p>
+                        <p>Use LinkedIn strategically to expand your professional network and showcase your expertise.</p>
+                        <ul class="tip-points">
+                            <li>Optimize your profile with keywords</li>
+                            <li>Share industry insights regularly</li>
+                            <li>Engage with others' content</li>
+                            <li>Join relevant groups and discussions</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★☆</span>
+                            <small>4.6/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership Tips -->
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="leadership">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>Lead by Example</h4>
+                        <p class="tip-category">Leadership</p>
+                        <p>Demonstrate the behaviors and values you want to see in your team members.</p>
+                        <ul class="tip-points">
+                            <li>Show accountability for mistakes</li>
+                            <li>Practice what you preach</li>
+                            <li>Maintain high ethical standards</li>
+                            <li>Be transparent in communication</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★★</span>
+                            <small>4.9/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="leadership">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Master Active Listening</h4>
+                        <p class="tip-category">Leadership</p>
+                        <p>Great leaders listen more than they speak and make team members feel heard and valued.</p>
+                        <ul class="tip-points">
+                            <li>Give your full attention</li>
+                            <li>Ask clarifying questions</li>
+                            <li>Summarize what you've heard</li>
+                            <li>Respond thoughtfully</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★☆</span>
+                            <small>4.8/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work-Life Balance Tips -->
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="work-life">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h4>Set Clear Boundaries</h4>
+                        <p class="tip-category">Work-Life Balance</p>
+                        <p>Establish and maintain healthy boundaries between your professional and personal life.</p>
+                        <ul class="tip-points">
+                            <li>Define your work hours</li>
+                            <li>Turn off work notifications after hours</li>
+                            <li>Take regular breaks during the day</li>
+                            <li>Use your vacation time</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★☆</span>
+                            <small>4.6/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 tip-item" data-category="work-life">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Master Time Management</h4>
+                        <p class="tip-category">Work-Life Balance</p>
+                        <p>Use effective time management techniques to be more productive and reduce work stress.</p>
+                        <ul class="tip-points">
+                            <li>Prioritize tasks using the Eisenhower Matrix</li>
+                            <li>Block time for deep work</li>
+                            <li>Minimize interruptions and distractions</li>
+                            <li>Review and adjust your schedule regularly</li>
+                        </ul>
+                        <div class="tip-rating">
+                            <span class="stars">★★★★★</span>
+                            <small>4.7/5 helpful</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tip -->
+    <section class="featured-tip">
+        <div class="container">
+            <div class="featured-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2><i class="fas fa-star"></i> Featured Tip of the Week</h2>
+                        <h3>The Power of Informational Interviews</h3>
+                        <p>One of the most underutilized job search strategies is the informational interview. Instead of directly asking for a job, request 15-20 minutes to learn about someone's career path and industry insights. This approach builds relationships, provides valuable market intelligence, and often leads to unexpected opportunities.</p>
+                        <ul class="featured-points">
+                            <li>Research and identify professionals in your target companies or roles</li>
+                            <li>Reach out with a personalized message explaining your interest</li>
+                            <li>Prepare thoughtful questions about their experience and industry trends</li>
+                            <li>Follow up with a thank you note and stay in touch periodically</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="featured-visual">
+                            <i class="fas fa-comments fa-8x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2>Get Weekly Career Tips</h2>
+                    <p>Subscribe to receive expert career advice and industry insights delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="form-row">
+                            <div class="col-md-8">
+                                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                    <small class="text-muted">No spam, unsubscribe anytime.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const tipItems = document.querySelectorAll('.tip-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.getAttribute('data-filter');
+            
+            tipItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.5s';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+{% endblock %}

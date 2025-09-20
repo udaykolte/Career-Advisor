@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Career & Skills Advisor{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Enhanced Navigation with Hamburger Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #6c63ff 0%, #4834d4 100%); backdrop-filter: blur(10px);">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="{{ url_for('index') }}">
+                <i class="fas fa-graduation-cap me-2 fa-lg"></i>
+                <span class="d-none d-sm-inline">Career Advisor</span>
+                <span class="d-inline d-sm-none">CA</span>
+            </a>
+            
+            <!-- Hamburger Menu Button -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    style="box-shadow: none; padding: 0.5rem;">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">
+                            <i class="fas fa-home me-2"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="careersDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-briefcase me-2"></i>Careers
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('careers_tech') }}"><i class="fas fa-code me-2"></i>Technology</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('careers_business') }}"><i class="fas fa-chart-line me-2"></i>Business</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('careers_design') }}"><i class="fas fa-palette me-2"></i>Design</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('careers_security') }}"><i class="fas fa-shield-alt me-2"></i>Security</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book me-2"></i>Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url_for('learning_resources') }}"><i class="fas fa-graduation-cap me-2"></i>Learning Hub</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('skill_guides') }}"><i class="fas fa-tools me-2"></i>Skill Guides</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('career_tips') }}"><i class="fas fa-lightbulb me-2"></i>Career Tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('blog') }}">
+                            <i class="fas fa-blog me-2"></i>Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">
+                            <i class="fas fa-info-circle me-2"></i>About
+                        </a>
+                    </li>
+                    {% if session.get('results') %}
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="{{ url_for('results') }}">
+                            <i class="fas fa-chart-line me-2"></i>My Results
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('clear_session') }}">
+                            <i class="fas fa-refresh me-2"></i>New Assessment
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">
+                            <i class="fas fa-envelope me-2"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-compass me-2"></i>Career & Skills Advisor</h5>
+                    <p class="mb-0">Discover your potential, plan your future.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <small>
+                            Made with <i class="fas fa-heart text-danger"></i> for career development
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

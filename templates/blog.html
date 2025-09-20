@@ -1,0 +1,421 @@
+{% extends "base.html" %}
+
+{% block title %}Career Blog - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-blog me-3"></i>Career Insights Blog
+                </h1>
+                <p class="lead mb-4">
+                    Stay updated with the latest career trends, industry insights, and professional development tips.
+                    Your guide to career success.
+                </p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-newspaper fa-8x text-white-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Article -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <div class="featured-article">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="article-image">
+                                <div class="placeholder-image bg-gradient-primary d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-star fa-4x text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="featured-badge">
+                                <span class="badge bg-warning text-dark mb-3">
+                                    <i class="fas fa-star me-1"></i>Featured Article
+                                </span>
+                            </div>
+                            <h2 class="fw-bold mb-3">The Future of Work: 10 Skills That Will Define 2025</h2>
+                            <p class="lead text-muted mb-3">
+                                Discover the essential skills that employers will be looking for in the coming years.
+                                From AI literacy to emotional intelligence, prepare yourself for tomorrow's job market.
+                            </p>
+                            <div class="article-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>December 10, 2024
+                                    <i class="fas fa-user ms-3 me-1"></i>Career Team
+                                    <i class="fas fa-clock ms-3 me-1"></i>8 min read
+                                </small>
+                            </div>
+                            <a href="#" class="btn btn-primary">Read Full Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Categories -->
+<section class="py-3 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="blog-categories text-center">
+                    <div class="category-filters">
+                        <button class="btn btn-outline-primary active me-2 mb-2" data-filter="all">All Posts</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="tech">Technology</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="career">Career Tips</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="skills">Skill Development</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="interview">Interviews</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="remote">Remote Work</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Articles -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4" id="blogGrid">
+            <!-- Tech Article -->
+            <div class="col-md-6 col-lg-4 blog-item" data-category="tech">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="placeholder-image bg-info d-flex align-items-center justify-content-center">
+                            <i class="fas fa-code fa-3x text-white"></i>
+                        </div>
+                        <div class="blog-category">
+                            <span class="badge bg-info">Technology</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h5 class="fw-bold mb-3">Breaking into Tech: A Complete Roadmap for Beginners</h5>
+                        <p class="text-muted mb-3">
+                            Step-by-step guide to starting your technology career, from choosing programming languages to landing your first job.
+                        </p>
+                        <div class="blog-meta mb-3">
+                            <small class="text-muted">
+                                <i class="fas fa-calendar me-1"></i>Dec 8, 2024
+                                <i class="fas fa-eye ms-3 me-1"></i>2.1k views
+                            </small>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Tips Article -->
+            <div class="col-md-6 col-lg-4 blog-item" data-category="career">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="placeholder-image bg-success d-flex align-items-center justify-content-center">
+                            <i class="fas fa-lightbulb fa-3x text-white"></i>
+                        </div>
+                        <div class="blog-category">
+                            <span class="badge bg-success">Career Tips</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h5 class="fw-bold mb-3">5 Signs It's Time to Switch Your Career Path</h5>
+                        <p class="text-muted mb-3">
+                            Learn to recognize when your current career isn't serving you and how to make a successful transition.
+                        </p>
+                        <div class="blog-meta mb-3">
+                            <small class="text-muted">
+                                <i class="fas fa-calendar me-1"></i>Dec 6, 2024
+                                <i class="fas fa-eye ms-3 me-1"></i>1.8k views
+                            </small>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Article -->
+            <div class="col-md-6 col-lg-4 blog-item" data-category="skills">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="placeholder-image bg-warning d-flex align-items-center justify-content-center">
+                            <i class="fas fa-tools fa-3x text-white"></i>
+                        </div>
+                        <div class="blog-category">
+                            <span class="badge bg-warning text-dark">Skill Development</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h5 class="fw-bold mb-3">Top 15 Soft Skills Every Professional Needs</h5>
+                        <p class="text-muted mb-3">
+                            Beyond technical skills, these soft skills will set you apart in any industry and boost your career growth.
+                        </p>
+                        <div class="blog-meta mb-3">
+                            <small class="text-muted">
+                                <i class="fas fa-calendar me-1"></i>Dec 4, 2024
+                                <i class="fas fa-eye ms-3 me-1"></i>3.2k views
+                            </small>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interview Article -->
+            <div class="col-md-6 col-lg-4 blog-item" data-category="interview">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="placeholder-image bg-danger d-flex align-items-center justify-content-center">
+                            <i class="fas fa-handshake fa-3x text-white"></i>
+                        </div>
+                        <div class="blog-category">
+                            <span class="badge bg-danger">Interviews</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h5 class="fw-bold mb-3">Ace Your Next Virtual Interview: Complete Guide</h5>
+                        <p class="text-muted mb-3">
+                            Master virtual interviews with these proven strategies, from technical setup to body language tips.
+                        </p>
+                        <div class="blog-meta mb-3">
+                            <small class="text-muted">
+                                <i class="fas fa-calendar me-1"></i>Dec 2, 2024
+                                <i class="fas fa-eye ms-3 me-1"></i>1.5k views
+                            </small>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remote Work Article -->
+            <div class="col-md-6 col-lg-4 blog-item" data-category="remote">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="placeholder-image bg-secondary d-flex align-items-center justify-content-center">
+                            <i class="fas fa-home fa-3x text-white"></i>
+                        </div>
+                        <div class="blog-category">
+                            <span class="badge bg-secondary">Remote Work</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h5 class="fw-bold mb-3">Building a Productive Home Office on Any Budget</h5>
+                        <p class="text-muted mb-3">
+                            Create an efficient workspace that boosts productivity, from ergonomic setups to tech essentials.
+                        </p>
+                        <div class="blog-meta mb-3">
+                            <small class="text-muted">
+                                <i class="fas fa-calendar me-1"></i>Nov 30, 2024
+                                <i class="fas fa-eye ms-3 me-1"></i>2.7k views
+                            </small>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Article -->
+            <div class="col-md-6 col-lg-4 blog-item" data-category="career">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div class="placeholder-image bg-primary d-flex align-items-center justify-content-center">
+                            <i class="fas fa-chart-line fa-3x text-white"></i>
+                        </div>
+                        <div class="blog-category">
+                            <span class="badge bg-primary">Career Tips</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h5 class="fw-bold mb-3">Salary Negotiation: Get Paid What You're Worth</h5>
+                        <p class="text-muted mb-3">
+                            Learn proven strategies to negotiate your salary effectively and confidently in any situation.
+                        </p>
+                        <div class="blog-meta mb-3">
+                            <small class="text-muted">
+                                <i class="fas fa-calendar me-1"></i>Nov 28, 2024
+                                <i class="fas fa-eye ms-3 me-1"></i>4.1k views
+                            </small>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h3 class="mb-4">📧 Stay Updated with Career Insights</h3>
+                <p class="lead mb-4">
+                    Get the latest career tips, industry trends, and job market insights delivered to your inbox weekly.
+                </p>
+                <div class="newsletter-form">
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-light">
+                                <i class="fas fa-paper-plane me-2"></i>Subscribe
+                            </button>
+                        </div>
+                    </form>
+                    <small class="text-white-50 mt-2 d-block">
+                        <i class="fas fa-lock me-1"></i>We respect your privacy. Unsubscribe anytime.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Blog category filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.category-filters .btn');
+    const blogItems = document.querySelectorAll('.blog-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter blog items
+            blogItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.5s ease-in-out';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Newsletter form submission
+    const newsletterForm = document.querySelector('.newsletter-form form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Show success message
+            const button = this.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check me-2"></i>Subscribed!';
+            button.classList.replace('btn-light', 'btn-success');
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.classList.replace('btn-success', 'btn-light');
+                this.querySelector('input[type="email"]').value = '';
+            }, 3000);
+        });
+    }
+});
+</script>
+
+<style>
+.featured-article {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #f1f3f4;
+}
+
+.placeholder-image {
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.blog-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-image .placeholder-image {
+    height: 200px;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.blog-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.category-filters .btn {
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.category-filters .btn.active {
+    background: #6c63ff;
+    border-color: #6c63ff;
+    color: white;
+}
+
+.newsletter-form .form-control {
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.newsletter-form .form-control:focus {
+    border-color: white;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    box-shadow: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+{% endblock %}

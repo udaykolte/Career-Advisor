@@ -1,9 +1,13 @@
 # Career & Skills Advisor Dependencies
-# This project uses only Python standard library modules
-# No external dependencies required at this time
+
+# Web Framework
+flask>=2.2.0
 
 # Future dependencies (if needed):
 # requests>=2.28.0  # For API calls to external career databases
 # pandas>=1.5.0     # For data analysis and processing
 # matplotlib>=3.6.0 # For visualizing career trends
-# flask>=2.2.0      # For web interface (future enhancement)
+
+# Optional: Vertex AI integration (install only if using Google Cloud)
+# To enable AI generation set `GOOGLE_APPLICATION_CREDENTIALS`.
+google-cloud-aiplatform>=1.26.0

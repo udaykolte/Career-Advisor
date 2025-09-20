@@ -1,0 +1,504 @@
+{% extends "base.html" %}
+
+{% block title %}Learning Resources - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-graduation-cap me-3"></i>Learning Hub
+                </h1>
+                <p class="lead mb-4">
+                    Discover free and premium learning resources to accelerate your career growth.
+                    From beginner tutorials to advanced certifications.
+                </p>
+                <div class="hero-stats">
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <div class="stat-item text-center">
+                                <h3 class="mb-1">500+</h3>
+                                <small>Free Resources</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item text-center">
+                                <h3 class="mb-1">50+</h3>
+                                <small>Platforms</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item text-center">
+                                <h3 class="mb-1">100%</h3>
+                                <small>Curated</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-books fa-8x text-white-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Resource Categories -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Programming -->
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-code text-primary"></i>
+                    </div>
+                    <h4>Programming</h4>
+                    <p class="text-muted">Learn coding from scratch to advanced concepts</p>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>freeCodeCamp</h6>
+                                <small class="text-success">FREE • Interactive</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.8★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Codecademy</h6>
+                                <small class="text-info">Freemium • Hands-on</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.7★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>LeetCode</h6>
+                                <small class="text-success">FREE • Practice</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.6★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-3">View All Programming Resources</a>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-bar text-info"></i>
+                    </div>
+                    <h4>Data Science</h4>
+                    <p class="text-muted">Master data analysis, ML, and statistics</p>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Kaggle Learn</h6>
+                                <small class="text-success">FREE • Micro-courses</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.9★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Google AI Education</h6>
+                                <small class="text-success">FREE • Comprehensive</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.8★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>StatQuest (YouTube)</h6>
+                                <small class="text-success">FREE • Visual</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.9★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-3">View All Data Science Resources</a>
+                </div>
+            </div>
+
+            <!-- Design -->
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-palette text-warning"></i>
+                    </div>
+                    <h4>Design</h4>
+                    <p class="text-muted">UI/UX design, graphic design, and creativity</p>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Figma Academy</h6>
+                                <small class="text-success">FREE • Interactive</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.8★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Google UX Design</h6>
+                                <small class="text-info">Paid • Certificate</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.7★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Dribbble</h6>
+                                <small class="text-success">FREE • Inspiration</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.5★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-3">View All Design Resources</a>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase text-success"></i>
+                    </div>
+                    <h4>Business</h4>
+                    <p class="text-muted">Marketing, management, and entrepreneurship</p>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>HubSpot Academy</h6>
+                                <small class="text-success">FREE • Certifications</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.8★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Google Digital Marketing</h6>
+                                <small class="text-success">FREE • Certificate</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.7★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Khan Academy</h6>
+                                <small class="text-success">FREE • Fundamentals</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.6★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-3">View All Business Resources</a>
+                </div>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt text-danger"></i>
+                    </div>
+                    <h4>Cybersecurity</h4>
+                    <p class="text-muted">Security, ethical hacking, and compliance</p>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Cybrary</h6>
+                                <small class="text-success">FREE • Comprehensive</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.7★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>TryHackMe</h6>
+                                <small class="text-info">Freemium • Interactive</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.8★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>OWASP</h6>
+                                <small class="text-success">FREE • Resources</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.6★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-3">View All Security Resources</a>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="col-md-6 col-lg-4">
+                <div class="resource-category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-users text-secondary"></i>
+                    </div>
+                    <h4>Soft Skills</h4>
+                    <p class="text-muted">Communication, leadership, and teamwork</p>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>LinkedIn Learning</h6>
+                                <small class="text-info">Premium • Professional</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.7★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>Coursera</h6>
+                                <small class="text-info">Audit Free • University</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.8★</span>
+                            </div>
+                        </div>
+                        <div class="resource-item">
+                            <div class="resource-info">
+                                <h6>TED Talks</h6>
+                                <small class="text-success">FREE • Inspirational</small>
+                            </div>
+                            <div class="resource-rating">
+                                <span class="badge bg-warning text-dark">4.9★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-3">View All Soft Skills Resources</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Resources -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold mb-3">🌟 Featured Resources</h2>
+                <p class="lead text-muted">Hand-picked resources that consistently deliver excellent results</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="featured-resource-card">
+                    <div class="resource-badge">
+                        <span class="badge bg-success">FREE</span>
+                    </div>
+                    <div class="resource-logo bg-primary">
+                        <i class="fab fa-python text-white fa-2x"></i>
+                    </div>
+                    <h5>Python.org Tutorial</h5>
+                    <p class="text-muted">Official Python documentation and tutorials for beginners to advanced developers.</p>
+                    <div class="resource-meta">
+                        <small class="text-muted">
+                            <i class="fas fa-clock me-1"></i>Self-paced
+                            <i class="fas fa-users ms-2 me-1"></i>10M+ users
+                        </small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="featured-resource-card">
+                    <div class="resource-badge">
+                        <span class="badge bg-warning text-dark">PREMIUM</span>
+                    </div>
+                    <div class="resource-logo bg-info">
+                        <i class="fab fa-react text-white fa-2x"></i>
+                    </div>
+                    <h5>React Official Docs</h5>
+                    <p class="text-muted">Complete guide to React from the team that created it. Interactive examples included.</p>
+                    <div class="resource-meta">
+                        <small class="text-muted">
+                            <i class="fas fa-clock me-1"></i>40+ hours
+                            <i class="fas fa-users ms-2 me-1"></i>5M+ users
+                        </small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="featured-resource-card">
+                    <div class="resource-badge">
+                        <span class="badge bg-success">FREE</span>
+                    </div>
+                    <div class="resource-logo bg-warning">
+                        <i class="fas fa-brain text-white fa-2x"></i>
+                    </div>
+                    <h5>Machine Learning Course</h5>
+                    <p class="text-muted">Andrew Ng's famous ML course on Coursera. Perfect introduction to machine learning.</p>
+                    <div class="resource-meta">
+                        <small class="text-muted">
+                            <i class="fas fa-clock me-1"></i>60 hours
+                            <i class="fas fa-users ms-2 me-1"></i>4M+ students
+                        </small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="featured-resource-card">
+                    <div class="resource-badge">
+                        <span class="badge bg-info">FREEMIUM</span>
+                    </div>
+                    <div class="resource-logo bg-success">
+                        <i class="fab fa-aws text-white fa-2x"></i>
+                    </div>
+                    <h5>AWS Training</h5>
+                    <p class="text-muted">Official AWS training materials for cloud computing and DevOps certification paths.</p>
+                    <div class="resource-meta">
+                        <small class="text-muted">
+                            <i class="fas fa-clock me-1"></i>100+ hours
+                            <i class="fas fa-users ms-2 me-1"></i>2M+ users
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Start Learning?</h2>
+        <p class="lead mb-4">Take our assessment to get personalized learning recommendations</p>
+        <a href="{{ url_for('index') }}#assessment" class="btn btn-light btn-lg me-3">
+            <i class="fas fa-play me-2"></i>Take Assessment
+        </a>
+        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-question-circle me-2"></i>Need Help Choosing?
+        </a>
+    </div>
+</section>
+
+<style>
+.resource-category-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f3f4;
+}
+
+.resource-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.category-icon {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.category-icon i {
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgba(108, 99, 255, 0.1);
+}
+
+.resource-list {
+    margin: 1.5rem 0;
+}
+
+.resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.resource-item:hover {
+    background: rgba(108, 99, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.resource-info h6 {
+    margin-bottom: 0.25rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.featured-resource-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.featured-resource-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.resource-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.resource-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hero-stats .stat-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffeaa7;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-stats .stat-item small {
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+}
+</style>
+{% endblock %}

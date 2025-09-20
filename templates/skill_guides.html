@@ -1,0 +1,550 @@
+{% extends "base.html" %}
+
+{% block title %}Skill Development Guides - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<div class="resources-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1><i class="fas fa-tools"></i> Skill Development Guides</h1>
+                <p class="lead">Master in-demand skills with our comprehensive guides and structured learning paths.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Categories -->
+    <section class="skills-navigation">
+        <div class="container">
+            <div class="nav-pills-wrapper">
+                <ul class="nav nav-pills justify-content-center" id="skillTabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tech-tab" data-toggle="pill" href="#tech">
+                            <i class="fas fa-code"></i> Technical Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="soft-tab" data-toggle="pill" href="#soft">
+                            <i class="fas fa-users"></i> Soft Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="business-tab" data-toggle="pill" href="#business">
+                            <i class="fas fa-chart-line"></i> Business Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="creative-tab" data-toggle="pill" href="#creative">
+                            <i class="fas fa-palette"></i> Creative Skills
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tab Content -->
+    <section class="skills-content">
+        <div class="container">
+            <div class="tab-content" id="skillTabContent">
+                
+                <!-- Technical Skills -->
+                <div class="tab-pane fade show active" id="tech" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <h4>Python Programming</h4>
+                                    <span class="skill-level beginner">Beginner to Advanced</span>
+                                </div>
+                                <p>Master Python from basics to advanced concepts including web development, data science, and automation.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>12 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.8/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Variables & Data Types</span>
+                                    <span class="topic-tag">Functions & Classes</span>
+                                    <span class="topic-tag">Libraries & Frameworks</span>
+                                    <span class="topic-tag">Projects</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <h4>JavaScript & Web Dev</h4>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <p>Build modern web applications with JavaScript, React, and popular frameworks.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>10 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.7/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">ES6+ Features</span>
+                                    <span class="topic-tag">React.js</span>
+                                    <span class="topic-tag">Node.js</span>
+                                    <span class="topic-tag">Full-stack Projects</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <h4>Data Science & Analytics</h4>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <p>Analyze data, build machine learning models, and extract meaningful insights.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>16 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.9/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Statistics</span>
+                                    <span class="topic-tag">Machine Learning</span>
+                                    <span class="topic-tag">Visualization</span>
+                                    <span class="topic-tag">Real Projects</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-aws"></i>
+                                    </div>
+                                    <h4>Cloud Computing (AWS)</h4>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <p>Deploy and manage applications in the cloud with Amazon Web Services.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>8 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.6/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">EC2 & S3</span>
+                                    <span class="topic-tag">Lambda Functions</span>
+                                    <span class="topic-tag">Database Services</span>
+                                    <span class="topic-tag">Security & Monitoring</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <h4>Mobile App Development</h4>
+                                    <span class="skill-level beginner">Beginner</span>
+                                </div>
+                                <p>Create native and cross-platform mobile applications for iOS and Android.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>14 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.5/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">React Native</span>
+                                    <span class="topic-tag">Flutter</span>
+                                    <span class="topic-tag">App Store Deployment</span>
+                                    <span class="topic-tag">UI/UX for Mobile</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h4>Cybersecurity Fundamentals</h4>
+                                    <span class="skill-level beginner">Beginner</span>
+                                </div>
+                                <p>Learn security principles, ethical hacking, and how to protect digital assets.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>10 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.8/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Network Security</span>
+                                    <span class="topic-tag">Penetration Testing</span>
+                                    <span class="topic-tag">Risk Assessment</span>
+                                    <span class="topic-tag">Compliance</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="tab-pane fade" id="soft" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4>Leadership & Management</h4>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <p>Develop leadership skills to inspire teams and drive organizational success.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>8 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.7/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Team Building</span>
+                                    <span class="topic-tag">Decision Making</span>
+                                    <span class="topic-tag">Delegation</span>
+                                    <span class="topic-tag">Performance Management</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <h4>Communication Skills</h4>
+                                    <span class="skill-level beginner">Beginner</span>
+                                </div>
+                                <p>Master verbal, written, and presentation skills for professional success.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>6 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.9/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Public Speaking</span>
+                                    <span class="topic-tag">Active Listening</span>
+                                    <span class="topic-tag">Written Communication</span>
+                                    <span class="topic-tag">Presentation Skills</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h4>Critical Thinking</h4>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <p>Enhance your analytical and problem-solving abilities for better decision-making.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>5 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.6/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Logic & Reasoning</span>
+                                    <span class="topic-tag">Problem Solving</span>
+                                    <span class="topic-tag">Analysis Techniques</span>
+                                    <span class="topic-tag">Decision Frameworks</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Skills -->
+                <div class="tab-pane fade" id="business" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h4>Business Analysis</h4>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <p>Learn to analyze business processes and identify improvement opportunities.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>10 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.7/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Requirements Gathering</span>
+                                    <span class="topic-tag">Process Mapping</span>
+                                    <span class="topic-tag">Data Analysis</span>
+                                    <span class="topic-tag">Stakeholder Management</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                    <h4>Project Management</h4>
+                                    <span class="skill-level beginner">Beginner</span>
+                                </div>
+                                <p>Master project planning, execution, and delivery using proven methodologies.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>12 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.8/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Agile & Scrum</span>
+                                    <span class="topic-tag">Risk Management</span>
+                                    <span class="topic-tag">Resource Planning</span>
+                                    <span class="topic-tag">Quality Assurance</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <h4>Digital Marketing</h4>
+                                    <span class="skill-level beginner">Beginner</span>
+                                </div>
+                                <p>Build comprehensive digital marketing strategies across multiple channels.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>9 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.5/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">SEO & SEM</span>
+                                    <span class="topic-tag">Social Media</span>
+                                    <span class="topic-tag">Content Marketing</span>
+                                    <span class="topic-tag">Analytics & ROI</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Skills -->
+                <div class="tab-pane fade" id="creative" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <h4>Graphic Design</h4>
+                                    <span class="skill-level beginner">Beginner</span>
+                                </div>
+                                <p>Master design principles and create stunning visual communications.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>8 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.8/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Adobe Creative Suite</span>
+                                    <span class="topic-tag">Typography</span>
+                                    <span class="topic-tag">Color Theory</span>
+                                    <span class="topic-tag">Brand Identity</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <h4>UI/UX Design</h4>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <p>Design intuitive user interfaces and exceptional user experiences.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>12 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.9/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">User Research</span>
+                                    <span class="topic-tag">Wireframing</span>
+                                    <span class="topic-tag">Prototyping</span>
+                                    <span class="topic-tag">Usability Testing</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="skill-card">
+                                <div class="skill-header">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <h4>Video Production</h4>
+                                    <span class="skill-level beginner">Beginner</span>
+                                </div>
+                                <p>Create compelling video content for marketing and storytelling.</p>
+                                <div class="skill-stats">
+                                    <div class="stat">
+                                        <strong>10 weeks</strong>
+                                        <small>Duration</small>
+                                    </div>
+                                    <div class="stat">
+                                        <strong>4.6/5</strong>
+                                        <small>Rating</small>
+                                    </div>
+                                </div>
+                                <div class="skill-topics">
+                                    <span class="topic-tag">Video Editing</span>
+                                    <span class="topic-tag">Motion Graphics</span>
+                                    <span class="topic-tag">Storytelling</span>
+                                    <span class="topic-tag">Color Grading</span>
+                                </div>
+                                <a href="#" class="btn btn-primary">Start Learning</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Path Generator -->
+    <section class="path-generator">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2>Create Your Personal Learning Path</h2>
+                    <p>Not sure where to start? Take our skill assessment to get a personalized learning path tailored to your goals and experience level.</p>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-route"></i> Get My Learning Path
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+// Initialize Bootstrap tabs
+$(document).ready(function() {
+    $('#skillTabs a').on('click', function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+});
+</script>
+{% endblock %}

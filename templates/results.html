@@ -1,0 +1,347 @@
+{% extends "base.html" %}
+
+{% block title %}Your Career Analysis - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<!-- Results Header -->
+<div class="results-header bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-trophy me-3"></i>Your Career Analysis
+                </h1>
+                <p class="lead mb-0">
+                    Hi {{ user_profile.name }}! Here's your personalized career guidance based on your profile.
+                </p>
+                <small class="text-white-50">Analysis completed on {{ analysis_date }}</small>
+            </div>
+            <div class="col-lg-4 text-end">
+                <div class="results-actions">
+                    <button class="btn btn-light btn-lg me-2" onclick="window.print()">
+                        <i class="fas fa-download me-2"></i>Save PDF
+                    </button>
+                    <a href="{{ url_for('clear_session') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-refresh me-2"></i>New Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- User Profile Summary -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <div class="profile-stat text-center">
+                    <div class="profile-stat-icon">
+                        <i class="fas fa-graduation-cap text-primary"></i>
+                    </div>
+                    <div class="profile-stat-content">
+                        <h6 class="mb-0">{{ user_profile.education }}</h6>
+                        <small class="text-muted">Education</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-stat text-center">
+                    <div class="profile-stat-icon">
+                        <i class="fas fa-briefcase text-success"></i>
+                    </div>
+                    <div class="profile-stat-content">
+                        <h6 class="mb-0">{{ user_profile.field or "Exploring" }}</h6>
+                        <small class="text-muted">Field</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-stat text-center">
+                    <div class="profile-stat-icon">
+                        <i class="fas fa-cogs text-warning"></i>
+                    </div>
+                    <div class="profile-stat-content">
+                        <h6 class="mb-0">{{ user_profile.skills|length }}</h6>
+                        <small class="text-muted">Current Skills</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="profile-stat text-center">
+                    <div class="profile-stat-icon">
+                        <i class="fas fa-clock text-info"></i>
+                    </div>
+                    <div class="profile-stat-content">
+                        <h6 class="mb-0">{{ user_profile.timeline }}</h6>
+                        <small class="text-muted">Timeline</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Results -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Career Suggestions -->
+            <div class="col-lg-8 mb-4">
+                <div class="results-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-route text-primary me-2"></i>
+                        Recommended Career Paths
+                    </h2>
+                    
+                    <div class="career-cards">
+                        {% for career in career_suggestions %}
+                        <div class="career-card">
+                            <div class="career-card-header">
+                                <h4 class="career-title">{{ career.name }}</h4>
+                                <div class="career-badge">
+                                    <span class="badge bg-primary">Top Match</span>
+                                </div>
+                            </div>
+                            <div class="career-skills">
+                                <h6 class="text-muted mb-2">Key Skills Required:</h6>
+                                <div class="skill-tags">
+                                    {% for skill in career.skills %}
+                                    <span class="badge bg-light text-dark me-1 mb-1">{{ skill }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Strengths Sidebar -->
+            <div class="col-lg-4 mb-4">
+                <div class="results-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-star text-warning me-2"></i>
+                        Your Strengths
+                    </h3>
+                    <div class="strengths-list">
+                        {% for strength in strengths %}
+                        <div class="strength-item">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            {{ strength }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <!-- Motivation -->
+                <div class="results-section mt-4">
+                    <div class="motivation-card">
+                        <div class="motivation-icon">
+                            <i class="fas fa-lightbulb text-warning"></i>
+                        </div>
+                        <div class="motivation-content">
+                            <h5>Daily Motivation</h5>
+                            <p class="mb-0">{{ advice }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Skills Development Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="results-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-chart-line text-success me-2"></i>
+                        Skills Development Plan
+                    </h2>
+                    
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <h4 class="text-primary mb-3">Skills to Develop</h4>
+                            <div class="skills-chart-container">
+                                <canvas id="skillsChart" width="400" height="200"></canvas>
+                            </div>
+                            <div class="skill-list mt-3">
+                                {% for skill in recommended_skills %}
+                                <div class="skill-progress">
+                                    <div class="skill-name">{{ skill }}</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{ loop.index * 15 }}%"></div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6 mb-4">
+                            <h4 class="text-success mb-3">Learning Resources</h4>
+                            <div class="resources-list">
+                                {% for resource in resources %}
+                                <div class="resource-item">
+                                    <div class="resource-icon">
+                                        <i class="fas fa-book text-info"></i>
+                                    </div>
+                                    <div class="resource-content">
+                                        <h6 class="mb-1">{{ resource.split(' - ')[0] }}</h6>
+                                        <small class="text-muted">{{ resource.split(' - ')[1] if ' - ' in resource else 'Free learning resource' }}</small>
+                                    </div>
+                                    <div class="resource-action">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Roadmap Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="results-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-map text-info me-2"></i>
+                        Your {{ user_profile.timeline }} Roadmap
+                    </h2>
+                    
+                    <div class="roadmap-timeline">
+                        {% for phase in roadmap %}
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-number">{{ loop.index }}</div>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h4 class="timeline-title">{{ phase.month }}</h4>
+                                    <span class="timeline-badge">{{ phase.focus }}</span>
+                                </div>
+                                <div class="timeline-tasks">
+                                    {% for task in phase.tasks %}
+                                    <div class="task-item">
+                                        <i class="fas fa-circle-check text-success me-2"></i>
+                                        {{ task }}
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="action-buttons">
+                    <button class="btn btn-primary btn-lg me-3" onclick="window.print()">
+                        <i class="fas fa-download me-2"></i>Save This Report
+                    </button>
+                    <a href="{{ url_for('clear_session') }}" class="btn btn-outline-primary btn-lg me-3">
+                        <i class="fas fa-refresh me-2"></i>Take New Assessment
+                    </a>
+                    <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#shareModal">
+                        <i class="fas fa-share me-2"></i>Share Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Share Modal -->
+<div class="modal fade" id="shareModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Share Your Career Analysis</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Great progress on your career journey! Share your results:</p>
+                <div class="share-buttons">
+                    <button class="btn btn-primary me-2" onclick="shareOnLinkedIn()">
+                        <i class="fab fa-linkedin me-2"></i>LinkedIn
+                    </button>
+                    <button class="btn btn-info me-2" onclick="shareOnTwitter()">
+                        <i class="fab fa-twitter me-2"></i>Twitter
+                    </button>
+                    <button class="btn btn-success" onclick="copyLink()">
+                        <i class="fas fa-link me-2"></i>Copy Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Initialize skills chart
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    
+    const skills = [
+        {% for skill in recommended_skills %}
+        "{{ skill }}"{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ];
+    
+    const skillLevels = [
+        {% for skill in recommended_skills %}
+        {{ 100 - (loop.index * 12) }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ];
+    
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: skills,
+            datasets: [{
+                data: skillLevels,
+                backgroundColor: [
+                    '#0d6efd', '#198754', '#ffc107', '#dc3545', 
+                    '#6f42c1', '#fd7e14', '#20c997', '#6c757d'
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+});
+
+// Share functionality
+function shareOnLinkedIn() {
+    const text = "Just completed my career assessment! Excited to work on my skills development plan. #CareerGrowth #SkillDevelopment";
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`);
+}
+
+function shareOnTwitter() {
+    const text = "Just discovered my career path potential! 🚀 Taking action on my skill development plan. #CareerGrowth #SkillUp";
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(window.location.href)}`);
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Link copied to clipboard!');
+    });
+}
+</script>
+{% endblock %}

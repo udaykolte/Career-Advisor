@@ -1,0 +1,361 @@
+{% extends "base.html" %}
+
+{% block title %}Technology Careers - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-code me-3"></i>Technology Careers
+                </h1>
+                <p class="lead mb-4">
+                    Explore exciting opportunities in the tech industry. From software development to AI,
+                    discover your path in the digital world.
+                </p>
+                <a href="{{ url_for('index') }}#assessment" class="btn btn-light btn-lg">
+                    <i class="fas fa-rocket me-2"></i>Take Assessment
+                </a>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-laptop-code fa-8x text-white-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Career Overview -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold mb-3" style="color: #6c63ff;">Tech Career Landscape</h2>
+                <p class="lead text-muted">The technology sector offers diverse opportunities with high growth potential</p>
+            </div>
+        </div>
+        
+        <!-- Career Cards -->
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="career-detail-card">
+                    <div class="career-icon">
+                        <i class="fas fa-code text-primary"></i>
+                    </div>
+                    <h4>Software Developer</h4>
+                    <p class="text-muted mb-3">Build applications, websites, and software solutions</p>
+                    <div class="salary-range mb-3">
+                        <span class="badge bg-success">$70K - $150K</span>
+                    </div>
+                    <div class="skills-required mb-3">
+                        <h6>Key Skills:</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-light text-dark">Python</span>
+                            <span class="badge bg-light text-dark">JavaScript</span>
+                            <span class="badge bg-light text-dark">Git</span>
+                            <span class="badge bg-light text-dark">Problem Solving</span>
+                        </div>
+                    </div>
+                    <div class="growth-info">
+                        <small class="text-success"><i class="fas fa-chart-line me-1"></i>22% growth expected</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="career-detail-card">
+                    <div class="career-icon">
+                        <i class="fas fa-database text-info"></i>
+                    </div>
+                    <h4>Data Scientist</h4>
+                    <p class="text-muted mb-3">Analyze complex data to drive business decisions</p>
+                    <div class="salary-range mb-3">
+                        <span class="badge bg-success">$95K - $180K</span>
+                    </div>
+                    <div class="skills-required mb-3">
+                        <h6>Key Skills:</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-light text-dark">Python</span>
+                            <span class="badge bg-light text-dark">Statistics</span>
+                            <span class="badge bg-light text-dark">Machine Learning</span>
+                            <span class="badge bg-light text-dark">SQL</span>
+                        </div>
+                    </div>
+                    <div class="growth-info">
+                        <small class="text-success"><i class="fas fa-chart-line me-1"></i>31% growth expected</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="career-detail-card">
+                    <div class="career-icon">
+                        <i class="fas fa-globe text-warning"></i>
+                    </div>
+                    <h4>Web Developer</h4>
+                    <p class="text-muted mb-3">Create engaging websites and web applications</p>
+                    <div class="salary-range mb-3">
+                        <span class="badge bg-success">$60K - $130K</span>
+                    </div>
+                    <div class="skills-required mb-3">
+                        <h6>Key Skills:</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-light text-dark">HTML</span>
+                            <span class="badge bg-light text-dark">CSS</span>
+                            <span class="badge bg-light text-dark">JavaScript</span>
+                            <span class="badge bg-light text-dark">React</span>
+                        </div>
+                    </div>
+                    <div class="growth-info">
+                        <small class="text-success"><i class="fas fa-chart-line me-1"></i>13% growth expected</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="career-detail-card">
+                    <div class="career-icon">
+                        <i class="fas fa-cloud text-secondary"></i>
+                    </div>
+                    <h4>DevOps Engineer</h4>
+                    <p class="text-muted mb-3">Bridge development and operations for efficient deployment</p>
+                    <div class="salary-range mb-3">
+                        <span class="badge bg-success">$85K - $160K</span>
+                    </div>
+                    <div class="skills-required mb-3">
+                        <h6>Key Skills:</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-light text-dark">Linux</span>
+                            <span class="badge bg-light text-dark">Docker</span>
+                            <span class="badge bg-light text-dark">Kubernetes</span>
+                            <span class="badge bg-light text-dark">AWS</span>
+                        </div>
+                    </div>
+                    <div class="growth-info">
+                        <small class="text-success"><i class="fas fa-chart-line me-1"></i>25% growth expected</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="career-detail-card">
+                    <div class="career-icon">
+                        <i class="fas fa-mobile-alt text-success"></i>
+                    </div>
+                    <h4>Mobile App Developer</h4>
+                    <p class="text-muted mb-3">Build native and cross-platform mobile applications</p>
+                    <div class="salary-range mb-3">
+                        <span class="badge bg-success">$75K - $140K</span>
+                    </div>
+                    <div class="skills-required mb-3">
+                        <h6>Key Skills:</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-light text-dark">Swift</span>
+                            <span class="badge bg-light text-dark">Kotlin</span>
+                            <span class="badge bg-light text-dark">React Native</span>
+                            <span class="badge bg-light text-dark">Flutter</span>
+                        </div>
+                    </div>
+                    <div class="growth-info">
+                        <small class="text-success"><i class="fas fa-chart-line me-1"></i>28% growth expected</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="career-detail-card">
+                    <div class="career-icon">
+                        <i class="fas fa-robot text-danger"></i>
+                    </div>
+                    <h4>AI/ML Engineer</h4>
+                    <p class="text-muted mb-3">Develop artificial intelligence and machine learning systems</p>
+                    <div class="salary-range mb-3">
+                        <span class="badge bg-success">$110K - $200K</span>
+                    </div>
+                    <div class="skills-required mb-3">
+                        <h6>Key Skills:</h6>
+                        <div class="skill-tags">
+                            <span class="badge bg-light text-dark">Python</span>
+                            <span class="badge bg-light text-dark">TensorFlow</span>
+                            <span class="badge bg-light text-dark">Deep Learning</span>
+                            <span class="badge bg-light text-dark">Neural Networks</span>
+                        </div>
+                    </div>
+                    <div class="growth-info">
+                        <small class="text-success"><i class="fas fa-chart-line me-1"></i>40% growth expected</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Learning Path Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold mb-3">Learning Paths</h2>
+                <p class="lead text-muted">Structured roadmaps to launch your tech career</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="learning-path-card">
+                    <h4><i class="fas fa-graduation-cap me-2 text-primary"></i>Beginner Path</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-badge">1</span>
+                            <div class="timeline-content">
+                                <h6>Programming Fundamentals</h6>
+                                <p>Learn basic programming concepts with Python or JavaScript</p>
+                                <small class="text-muted">Duration: 2-3 months</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">2</span>
+                            <div class="timeline-content">
+                                <h6>Web Development Basics</h6>
+                                <p>HTML, CSS, and basic JavaScript for web development</p>
+                                <small class="text-muted">Duration: 2-3 months</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">3</span>
+                            <div class="timeline-content">
+                                <h6>Build Projects</h6>
+                                <p>Create portfolio projects to showcase your skills</p>
+                                <small class="text-muted">Duration: 3-4 months</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="learning-path-card">
+                    <h4><i class="fas fa-rocket me-2 text-success"></i>Advanced Path</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-badge">1</span>
+                            <div class="timeline-content">
+                                <h6>Advanced Frameworks</h6>
+                                <p>Master React, Angular, or Vue.js for frontend development</p>
+                                <small class="text-muted">Duration: 3-4 months</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">2</span>
+                            <div class="timeline-content">
+                                <h6>Backend Technologies</h6>
+                                <p>Learn Node.js, Django, or Spring Boot for server-side development</p>
+                                <small class="text-muted">Duration: 3-4 months</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">3</span>
+                            <div class="timeline-content">
+                                <h6>Cloud & DevOps</h6>
+                                <p>Deploy applications using AWS, Docker, and CI/CD pipelines</p>
+                                <small class="text-muted">Duration: 2-3 months</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Start Your Tech Career?</h2>
+        <p class="lead mb-4">Take our assessment to get personalized recommendations for your tech journey</p>
+        <a href="{{ url_for('index') }}#assessment" class="btn btn-light btn-lg me-3">
+            <i class="fas fa-play me-2"></i>Take Assessment
+        </a>
+        <a href="{{ url_for('learning_resources') }}" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-book me-2"></i>Learning Resources
+        </a>
+    </div>
+</section>
+
+<style>
+.career-detail-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f3f4;
+}
+
+.career-detail-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.career-icon {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.career-icon i {
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgba(108, 99, 255, 0.1);
+}
+
+.learning-path-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #6c63ff, #4834d4);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -2rem;
+    width: 2rem;
+    height: 2rem;
+    background: #6c63ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.timeline-content {
+    margin-left: 1rem;
+}
+</style>
+{% endblock %}

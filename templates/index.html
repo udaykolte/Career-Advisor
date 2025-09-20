@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block title %}Career Assessment - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-90">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="display-3 fw-bold mb-4" style="color: white; text-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                        Discover Your <span style="background: linear-gradient(45deg, #ffeaa7, #fab1a0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">Dream Career</span>
+                    </h1>
+                    <p class="lead mb-4" style="color: rgba(255,255,255,0.95); font-size: 1.3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                        🎯 Get personalized career recommendations<br>
+                        📊 Interactive skill development plans<br>
+                        📚 Curated learning resources tailored just for you<br>
+                        <strong style="color: #ffeaa7;">Start your journey to career success today!</strong>
+                    </p>
+                    <div class="stats-row mb-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="mb-1" style="color: #ffeaa7; font-size: 3rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">50+</h3>
+                                    <small style="color: white; font-weight: 600; font-size: 1.1rem;">Career Paths</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="mb-1" style="color: #ffeaa7; font-size: 3rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">200+</h3>
+                                    <small style="color: white; font-weight: 600; font-size: 1.1rem;">Skills Tracked</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="mb-1" style="color: #00b894; font-size: 3rem; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">100%</h3>
+                                    <small style="color: white; font-weight: 600; font-size: 1.1rem;">FREE</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#assessment" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-rocket me-2"></i>Start Assessment
+                    </a>
+                    <a href="{{ url_for('about') }}" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image text-center">
+                    <div class="floating-elements">
+                        <div class="float-item float-item-1">
+                            <i class="fas fa-code text-primary"></i>
+                        </div>
+                        <div class="float-item float-item-2">
+                            <i class="fas fa-brain text-success"></i>
+                        </div>
+                        <div class="float-item float-item-3">
+                            <i class="fas fa-chart-line text-warning"></i>
+                        </div>
+                        <div class="float-item float-item-4">
+                            <i class="fas fa-palette text-info"></i>
+                        </div>
+                    </div>
+                    <div class="hero-circle">
+                        <i class="fas fa-user-graduate fa-5x text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Assessment Form Section -->
+<section id="assessment" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3" style="background: linear-gradient(135deg, #6c63ff, #4834d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🎯 Interactive Career Assessment</h2>
+                    <p class="lead" style="color: #2c3e50; font-size: 1.2rem; font-weight: 500;">
+                        ✨ Tell us about yourself and we'll provide <strong style="color: #6c63ff;">personalized career guidance</strong><br>
+                        📈 Get insights, roadmaps, and resources tailored to your goals
+                    </p>
+                </div>
+                
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-4">
+                        <form id="assessmentForm" action="{{ url_for('assess') }}" method="POST" class="needs-validation" novalidate>
+                            <!-- Progress Bar -->
+                            <div class="progress mb-4" style="height: 6px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" id="progressBar"></div>
+                            </div>
+                            
+                            <!-- Step 1: Basic Info -->
+                            <div class="form-step active" data-step="1">
+                                <h4 class="text-primary mb-3">
+                                    <i class="fas fa-user me-2"></i>Basic Information
+                                </h4>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                        <div class="invalid-feedback">Please provide your name.</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="education" class="form-label">Education Level *</label>
+                                        <select class="form-select" id="education" name="education" required>
+                                            <option value="">Choose...</option>
+                                            <option value="High School">High School</option>
+                                            <option value="Associate Degree">Associate Degree</option>
+                                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                            <option value="Master's Degree">Master's Degree</option>
+                                            <option value="PhD">PhD</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your education level.</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="field" class="form-label">Current Field of Study/Work</label>
+                                    <input type="text" class="form-control" id="field" name="field" 
+                                           placeholder="e.g., Computer Science, Marketing, Engineering">
+                                </div>
+                                
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn btn-primary next-btn">
+                                        Next <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2: Skills -->
+                            <div class="form-step" data-step="2">
+                                <h4 class="text-primary mb-3">
+                                    <i class="fas fa-cogs me-2"></i>Your Skills
+                                </h4>
+                                
+                                <div class="mb-3">
+                                    <label for="skills" class="form-label">Current Skills *</label>
+                                    <textarea class="form-control" id="skills" name="skills" rows="3" 
+                                              placeholder="List your skills separated by commas (e.g., Python, Communication, Project Management)" required></textarea>
+                                    <div class="form-text">Separate each skill with a comma</div>
+                                    <div class="invalid-feedback">Please list your current skills.</div>
+                                </div>
+                                
+                                <div class="skill-suggestions mb-3">
+                                    <small class="text-muted mb-2 d-block">Popular skills you might have:</small>
+                                    <div class="skill-tags">
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="Python">Python</span>
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="JavaScript">JavaScript</span>
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="Communication">Communication</span>
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="Leadership">Leadership</span>
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="Data Analysis">Data Analysis</span>
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="Design">Design</span>
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="Marketing">Marketing</span>
+                                        <span class="badge bg-light text-dark me-2 mb-2 skill-suggestion" data-skill="Project Management">Project Management</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary prev-btn">
+                                        <i class="fas fa-arrow-left me-2"></i>Previous
+                                    </button>
+                                    <button type="button" class="btn btn-primary next-btn">
+                                        Next <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3: Interests & Goals -->
+                            <div class="form-step" data-step="3">
+                                <h4 class="text-primary mb-3">
+                                    <i class="fas fa-bullseye me-2"></i>Interests & Goals
+                                </h4>
+                                
+                                <div class="mb-3">
+                                    <label for="interests" class="form-label">What interests you most? *</label>
+                                    <textarea class="form-control" id="interests" name="interests" rows="3" 
+                                              placeholder="Describe your interests, passions, and what motivates you" required></textarea>
+                                    <div class="invalid-feedback">Please describe your interests.</div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="career_goals" class="form-label">Career Goals *</label>
+                                    <textarea class="form-control" id="career_goals" name="career_goals" rows="3" 
+                                              placeholder="What career goals do you want to achieve?" required></textarea>
+                                    <div class="invalid-feedback">Please describe your career goals.</div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="timeline" class="form-label">Timeline *</label>
+                                    <select class="form-select" id="timeline" name="timeline" required>
+                                        <option value="">Choose...</option>
+                                        <option value="3 months">3 months</option>
+                                        <option value="6 months">6 months</option>
+                                        <option value="1 year">1 year</option>
+                                        <option value="2 years">2 years</option>
+                                        <option value="3+ years">3+ years</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select your timeline.</div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary prev-btn">
+                                        <i class="fas fa-arrow-left me-2"></i>Previous
+                                    </button>
+                                    <button type="submit" class="btn btn-success btn-lg" id="submitBtn">
+                                        <i class="fas fa-magic me-2"></i>Get My Career Plan
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold mb-3">What You'll Get</h2>
+                <p class="lead text-muted">Comprehensive career guidance tailored to your profile</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card text-center h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-route fa-3x text-primary mb-3"></i>
+                    </div>
+                    <h4>Personalized Career Paths</h4>
+                    <p class="text-muted">Get career suggestions based on your skills, interests, and goals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card text-center h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap fa-3x text-success mb-3"></i>
+                    </div>
+                    <h4>Skill Development Plan</h4>
+                    <p class="text-muted">Detailed roadmap with actionable steps to develop required skills.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card text-center h-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open fa-3x text-info mb-3"></i>
+                    </div>
+                    <h4>Free Learning Resources</h4>
+                    <p class="text-muted">Curated list of free courses, tutorials, and learning materials.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Multi-step form functionality will be added via app.js
+</script>
+{% endblock %}

@@ -1,111 +1,19 @@
-# 🎯 Career & Skills Advisor
+# Career & Skills Advisor - Interactive Web Application
 
-A personalized career guidance tool for students and young professionals to discover career paths, develop skills, and create actionable learning roadmaps.
+A comprehensive web-based tool that helps students and professionals discover career paths, assess skills, and get personalized guidance for professional development.
 
-## 🌟 Features
+## 🌟 Overview
 
-- **Personalized Career Analysis**: Get career suggestions based on your background, skills, and interests
-- **Skills Gap Analysis**: Identify your strengths and areas for growth  
-- **Free Learning Resources**: Curated list of high-quality, free online courses and tutorials
-- **3-6 Month Roadmaps**: Step-by-step learning plans tailored to your goals
-- **Motivational Guidance**: Practical advice to keep you motivated throughout your journey
+This modern web application provides:
+- 🎯 **Interactive Career Assessment** - Beautiful multi-step form with real-time validation
+- 📊 **Visual Results Dashboard** - Charts, progress bars, and interactive elements
+- 📚 **Curated Learning Resources** - Direct links to free courses and tutorials
+- 🗓️ **Timeline Roadmap** - Visual 3-6 month development plan
+- 💪 **Strengths Analysis** - Personalized insights with visual indicators
+- 🚀 **Motivational Guidance** - Daily tips and actionable advice
+- 📱 **Responsive Design** - Works perfectly on all devices
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.7 or higher
-- Terminal/Command Prompt
-
-### Installation & Usage
-
-1. **Clone or Download the Project**
-   ```bash
-   git clone https://github.com/yourusername/career-skills-advisor.git
-   cd career-skills-advisor
-   ```
-
-2. **Run the Career Advisor**
-   ```bash
-   python src/career_advisor.py
-   ```
-
-3. **Follow the Interactive Prompts**
-   - Enter your name, education level, and field of study
-   - List your current skills (comma-separated)
-   - Share your interests and career goals
-   - Specify your timeline for achieving goals
-
-4. **Get Your Personalized Report**
-   The tool will provide:
-   - Career suggestions matched to your profile
-   - Skills you should develop
-   - Free learning resources
-   - A detailed 3-6 month roadmap
-   - Motivational tips
-
-## 📋 Example Output
-
-```
-🎯 YOUR PERSONALIZED CAREER ANALYSIS
-============================================================
-
-👋 Hello Sarah!
-Analysis Date: September 12, 2025
-
-💪 YOUR STRENGTHS:
-  ✓ Strong skill foundation
-  ✓ Technical aptitude
-
-🎯 CAREER SUGGESTIONS:
-  1. Software Developer
-     Key Skills: Python, JavaScript, Git, Problem Solving
-  2. Data Scientist  
-     Key Skills: Python, Statistics, Machine Learning, SQL
-
-🛠️ RECOMMENDED SKILLS TO DEVELOP:
-  • Python
-  • JavaScript  
-  • Git
-  • Problem Solving
-  • Statistics
-  • Machine Learning
-
-📚 FREE LEARNING RESOURCES:
-  • freeCodeCamp - Complete web development curriculum
-  • Codecademy - Interactive coding lessons
-  • Kaggle Learn - Free micro-courses in data science
-  • YouTube - Vast collection of tutorial videos
-
-🗓️ YOUR 6-MONTH ROADMAP:
-
-  Month 1-2: Foundation Building
-    - Complete beginner courses in your chosen field
-    - Set up learning routine (2-3 hours daily)
-    - Join relevant online communities
-    - Create learning portfolio/project folder
-
-  Month 3-4: Skill Development  
-    - Work on 2-3 practical projects
-    - Network with professionals in your field
-    - Attend virtual meetups or webinars
-    - Update LinkedIn profile and resume
-
-  Month 5-6: Application & Growth
-    - Apply skills to real-world problems
-    - Seek internships or volunteer opportunities
-    - Build portfolio website or showcase
-    - Start applying for entry-level positions
-
-💫 MOTIVATION TIP:
-  🚀 Remember: Every expert was once a beginner. Start where you are, use what you have!
-
-🎉 You're ready to start your journey! Good luck, Sarah!
-============================================================
-```
-
-## 🎯 Supported Career Paths
-
-The advisor currently provides guidance for careers in:
+## Career Paths Supported
 
 ### Technology
 - Software Developer
@@ -113,71 +21,100 @@ The advisor currently provides guidance for careers in:
 - Web Developer
 - DevOps Engineer
 
+### Cybersecurity
+- Cybersecurity Analyst
+- Ethical Hacker
+- Security Engineer
+- Forensic Analyst
+
 ### Business
 - Product Manager
-- Digital Marketing Specialist
+- Digital Marketing
 - Business Analyst
 
 ### Design
 - UX/UI Designer
 - Graphic Designer
 
-## 📚 Resource Categories
+## 🚀 Quick Start
 
-The tool recommends resources from these categories:
-- **Programming**: freeCodeCamp, Codecademy, Python.org
-- **Data Science**: Kaggle Learn, Coursera, StatQuest
-- **Design**: Figma Academy, Adobe Tutorials, Dribbble  
-- **Business**: Google Digital Marketing, HubSpot Academy
-- **General**: LinkedIn Learning, YouTube, edX
+### Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
 
-## 🛠️ Project Structure
+### Installation & Running
 
-```
-career-skills-advisor/
-├── src/
-│   └── career_advisor.py    # Main application logic
-├── tests/                   # Test files (coming soon)
-├── docs/                    # Documentation
-├── README.md               # This file
-├── requirements.txt        # Python dependencies
-└── .gitignore             # Git ignore rules
+**1. Install Flask:**
+```bash
+py -m pip install flask
+# or on macOS/Linux: python3 -m pip install flask
 ```
 
-## 🔧 Customization
+**2. Start the Web Application:**
+```bash
+py start_server.py
+# or simply: py app.py
+```
 
-You can easily extend the Career Advisor by:
+**3. Open Your Browser:**
+```
+http://localhost:5000
+```
 
-1. **Adding New Career Paths**: Edit the `career_data` dictionary in `career_advisor.py`
-2. **Updating Resources**: Modify the `resources` dictionary in the `recommend_resources()` method
-3. **Customizing Roadmaps**: Adjust the roadmap structure in `create_roadmap()`
-4. **Adding Analysis Logic**: Enhance the `analyze_profile()` method
+**4. Take the Assessment:**
+Fill out the interactive form and get your personalized career guidance!
 
-## 🤝 Contributing
+### Alternative: Command Line Version
+```bash
+py run.py
+# For text-based experience
+```
 
-We welcome contributions! Here are ways you can help:
+## How It Works
 
-- Add new career paths and skills
-- Improve the analysis algorithm
-- Add more learning resources
-- Create unit tests
-- Improve documentation
-- Report bugs or suggest features
+1. **Input Collection**: Answer questions about your background, skills, interests, and career goals
+2. **Smart Analysis**: The algorithm scores and matches careers based on your responses
+3. **Personalized Results**: Get career suggestions, skill recommendations, and learning resources
+4. **Action Plan**: Receive a customized roadmap for skill development
 
-## 📝 License
+## Sample Session
 
-This project is open source and available under the [MIT License](LICENSE).
+```
+🎯 Welcome to Your Personal Career & Skills Advisor!
+==================================================
+What's your name? John
+Current education level: Bachelor's
+Field of study/work: Computer Science
+List your current skills: Python, Web Development, AI
+What areas interest you most? Machine Learning
+What are your career goals? Data Scientist
+When do you want to achieve these goals? 2 years
 
-## 🎉 About
+🎯 YOUR PERSONALIZED CAREER ANALYSIS
+============================================================
 
-Created to help students and young professionals make informed career decisions and develop practical skills through free, accessible resources.
+🎯 CAREER SUGGESTIONS:
+  1. Data Scientist
+     Key Skills: Python, Statistics, Machine Learning, SQL
+  2. Software Developer  
+     Key Skills: Python, JavaScript, Git, Problem Solving
+...
+```
 
-**Target Audience**: Students, recent graduates, and young professionals looking for career guidance and skill development.
+## Features
 
-**Philosophy**: Everyone deserves access to quality career guidance, regardless of their background or financial situation.
+- ✅ **Smart Career Matching** - Uses keyword matching and scoring algorithm
+- ✅ **Skills Gap Analysis** - Identifies skills needed for your target career
+- ✅ **Free Learning Resources** - Curated list of free courses and platforms
+- ✅ **Custom Roadmap** - 6-month structured learning plan
+- ✅ **Multiple Career Categories** - Tech, Security, Business, and Design paths
+- ✅ **Interactive CLI Interface** - Easy-to-use command-line experience
+- ✅ **No External Dependencies** - Runs with Python standard library only
 
----
+## Contributing
 
-**Happy Learning! 🚀**
+This is a demo project. Contributions and suggestions are welcome!
 
-*Remember: Your career journey is unique. Use this tool as a starting point, but always trust your instincts and passion.*
+## License
+
+MIT License

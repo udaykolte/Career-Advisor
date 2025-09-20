@@ -1,0 +1,405 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Career & Skills Advisor{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-envelope me-3"></i>Get in Touch
+                </h1>
+                <p class="lead mb-4">
+                    Have questions about your career journey? Need personalized guidance? 
+                    We're here to help you succeed in your professional goals.
+                </p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-headset fa-8x text-white-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-card">
+                    <h2 class="mb-4">Send us a Message</h2>
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                                <div class="invalid-feedback">Please provide your first name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                                <div class="invalid-feedback">Please provide your last name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Choose a topic...</option>
+                                    <option value="career-guidance">Career Guidance</option>
+                                    <option value="assessment-help">Assessment Help</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="partnership">Partnership Opportunities</option>
+                                    <option value="feedback">Feedback & Suggestions</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a subject.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="6" 
+                                         placeholder="Tell us about your question or how we can help you..." required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our career tips newsletter
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info-card">
+                    <h3 class="mb-4">Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope text-primary"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Email Us</h6>
+                            <p class="text-muted">support@careeradvisor.com</p>
+                            <small class="text-success">📧 We reply within 24 hours</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments text-success"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Live Chat</h6>
+                            <p class="text-muted">Get instant answers</p>
+                            <button class="btn btn-sm btn-outline-success">
+                                <i class="fas fa-comment me-1"></i>Start Chat
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock text-info"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Support Hours</h6>
+                            <p class="text-muted">Monday - Friday<br>9:00 AM - 6:00 PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-book text-warning"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Help Center</h6>
+                            <p class="text-muted">Find answers to common questions</p>
+                            <a href="#" class="btn btn-sm btn-outline-warning">
+                                <i class="fas fa-question-circle me-1"></i>Visit FAQ
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links mt-4">
+                        <h6 class="mb-3">Follow Us</h6>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Quick answers to common questions</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How accurate are the career recommendations?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our AI-powered system analyzes your skills, interests, and goals using advanced algorithms. 
+                                While highly accurate, we recommend using our suggestions as guidance alongside professional 
+                                career counseling for major decisions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Is the career assessment really free?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! Our comprehensive career assessment is completely free. We believe everyone deserves 
+                                access to quality career guidance, regardless of their financial situation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Can I retake the assessment?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! As your skills and interests evolve, you can retake the assessment anytime 
+                                to get updated recommendations that reflect your current situation and goals.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Do you offer personalized career coaching?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Currently, we offer AI-powered assessments and resources. For personalized coaching, 
+                                please contact us through the form above, and we'll connect you with qualified career counselors 
+                                in our network.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Discover Your Career Path?</h2>
+        <p class="lead mb-4">Take our free assessment and get personalized career guidance in minutes</p>
+        <a href="{{ url_for('index') }}#assessment" class="btn btn-light btn-lg">
+            <i class="fas fa-play me-2"></i>Start Assessment
+        </a>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Form validation and submission
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (this.checkValidity()) {
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
+                submitBtn.classList.replace('btn-primary', 'btn-success');
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.classList.replace('btn-success', 'btn-primary');
+                    submitBtn.disabled = false;
+                    this.reset();
+                    this.classList.remove('was-validated');
+                }, 3000);
+            }, 2000);
+        }
+        
+        this.classList.add('was-validated');
+    });
+    
+    // Live chat simulation
+    const chatBtn = document.querySelector('.btn-outline-success');
+    if (chatBtn) {
+        chatBtn.addEventListener('click', function() {
+            alert('Live chat feature coming soon! Please use the contact form or email us directly.');
+        });
+    }
+});
+</script>
+
+<style>
+.contact-form-card, .contact-info-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(108, 99, 255, 0.05);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-icon i {
+    font-size: 1.2rem;
+}
+
+.contact-details h6 {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-icon.linkedin { background: #0077b5; }
+.social-icon.twitter { background: #1da1f2; }
+.social-icon.facebook { background: #1877f2; }
+.social-icon.instagram { background: #e4405f; }
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 15px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.accordion-button {
+    border-radius: 15px !important;
+    font-weight: 600;
+    color: #2c3e50;
+    background: white;
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    border-radius: 0 0 15px 15px;
+    color: #636e72;
+    line-height: 1.6;
+}
+</style>
+{% endblock %}
