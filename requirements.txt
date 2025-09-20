@@ -3,6 +3,9 @@
 # Web Framework
 flask>=2.2.0
 
+# Production WSGI server for Render/containers
+gunicorn>=21.2.0
+
 # Future dependencies (if needed):
 # requests>=2.28.0  # For API calls to external career databases
 # pandas>=1.5.0     # For data analysis and processing
