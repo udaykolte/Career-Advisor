@@ -1,0 +1,8 @@
+v: 0
+name: career-advisor
+micros:
+  - name: web
+    src: .
+    engine: python3.11
+    run: gunicorn backend.app:app -b 0.0.0.0:${PORT}
+    primary: true

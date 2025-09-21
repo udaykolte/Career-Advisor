@@ -1,0 +1,11 @@
+.venv*/
+.venv_vs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+certs/
+server.err
+.github/
+*.bat
+*.ps1
