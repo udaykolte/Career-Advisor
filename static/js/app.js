@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.results-header')) {
         initializeResultsAnimations();
     }
+
+    // Background keep-alive ping every 30s (no UI impact)
+    startKeepAlive();
 });
 
 // Enhanced Multi-step form functionality
@@ -373,6 +376,22 @@ function initializeResultsAnimations() {
         
         setTimeout(typeWriter, 1000);
     }
+}
+
+// Keep-alive pinger to prevent free host idle while tab is open
+function startKeepAlive() {
+    const KEEPALIVE_URL = '/_keepalive';
+    const INTERVAL_MS = 30000; // 30 seconds
+
+    const ping = () => {
+        // Use fetch with no-store to avoid caches; swallow errors
+        fetch(KEEPALIVE_URL, { method: 'GET', cache: 'no-store', headers: { 'x-keepalive': '1' } })
+            .catch(() => {});
+    };
+
+    // Prime immediately, then schedule
+    ping();
+    setInterval(ping, INTERVAL_MS);
 }
 
 // Utility functions

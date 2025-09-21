@@ -123,6 +123,11 @@ def not_found(error):
 def internal_error(error):
     return render_template('500.html'), 500
 
+# Lightweight keep-alive/health endpoint (no design impact)
+@app.route('/_keepalive')
+def keepalive():
+    return ('', 204)
+
 # Career Pages Routes
 @app.route('/careers/technology')
 def careers_tech():
